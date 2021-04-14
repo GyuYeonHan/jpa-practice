@@ -1,6 +1,6 @@
 package jpabook.jpashop.repository;
 
-import jpabook.jpashop.Member;
+import jpabook.jpashop.domain.Member;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -17,7 +17,7 @@ public class MemberRepository {
         em.persist(member);
     }
 
-    public Member find(Long id) {
+    public Member findOne(Long id) {
         return em.find(Member.class, id);
     }
 
