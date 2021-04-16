@@ -1,8 +1,11 @@
 package jpabook.jpashop.repository;
 
+import jpabook.jpashop.domain.Address;
 import jpabook.jpashop.domain.Member;
+import org.springframework.data.domain.AfterDomainEventPublication;
 import org.springframework.stereotype.Repository;
 
+import javax.annotation.PostConstruct;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
@@ -31,4 +34,5 @@ public class MemberRepository {
                 .setParameter("name", name)
                 .getResultList();
     }
+
 }
